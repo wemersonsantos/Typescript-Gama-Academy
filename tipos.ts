@@ -46,3 +46,18 @@ function criar(objeto: object){
 criar({
     propriedade: 1
 })
+//criar('vitor') //dá erro
+
+//* Never
+//Bem pouca utilizada
+function loopInfinito(): never{
+    while(true){ }
+}//!função que nunca termina
+
+function erro(msg: string): never{
+    throw new Error(msg)
+}//!função que retorna erro
+
+function falha(): never{
+    return erro('Algo falhou')
+}//!função que chama um Never
