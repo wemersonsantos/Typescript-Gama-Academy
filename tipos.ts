@@ -61,3 +61,12 @@ function erro(msg: string): never{
 function falha(): never{
     return erro('Algo falhou')
 }//!função que chama um Never
+
+//* Union Types, pode ter mais de um tipo
+const nota: string | number = 5;
+function exibirNota(nota: number | string){
+    console.log(`A nota é ${nota}`);
+}
+exibirNota('10');
+exibirNota(10);
+
