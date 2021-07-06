@@ -70,3 +70,24 @@ function exibirNota(nota: number | string){
 exibirNota('10');
 exibirNota(10);
 
+//* Alias
+
+type Funcionario = {
+    nome: string,
+    sobrenome: string,
+    dataNascimento: Date
+}
+
+//type Funcionarios = Array<Funcionario>;//pode receber mais de um tipo
+const funcionarios: Funcionario [] = [{
+    nome: 'vitor',
+    sobrenome: 'farias',
+    dataNascimento: new Date()
+}];
+function tratarFuncionario(funcionarios: Funcionario[]){
+    for(let funcionario of funcionarios){
+        console.log('Nome do funcionário: ', funcionario.nome);
+    }
+}
+
+
