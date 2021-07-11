@@ -72,7 +72,7 @@ exibirNota(10);
 
 //* Alias
 
-type Funcionario = {
+type Funcionario = { //criar um type com várias características
     nome: string,
     sobrenome: string,
     dataNascimento: Date
@@ -104,3 +104,13 @@ const contato: Contato = {
     nome: 'Vitor',
     telefone1: '123854564',
 }
+
+//* Type Assertion
+const minhaIdade: any = 23;
+(minhaIdade as number).toString(); //informando qual tipo para o typeScript
+//(<number>minhaIdade).toString(); //outro forma de declarar
+
+const input = document.getElementById('numero1') as HTMLInputElement; //informando que irá receber um elemento HTML
+//const input = <HTMLInputElement>document.getElementById('numero1'); //outro forma de declarar
+console.log(input.value);//!senão informar, irá ocorrer erro
+
